@@ -30,9 +30,8 @@ STRING \"[^"]*\"
 int yywrap() { return 1; }
 
 // HOW TO RUN
-// bison -d yacc8.y
-// flex lex8.l
-// gcc -o output yacc8.tab.c lex.yy.c -lfl
-
+//lex 8.l
+//yacc -d 8.y
+//gcc lex.yy.c y.tab.c -lfl -o output
 // echo 'int main(){int a=5;int b=10; a=b+a; printf("Sum %d\n",a);}' | ./output
 
