@@ -1,3 +1,5 @@
+//Write a YACC program to recognize strings of the form a n b n+m c m , n,m&gt;=0.
+
 %{
 #include "y.tab.h"
 %}
