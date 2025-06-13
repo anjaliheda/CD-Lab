@@ -1,5 +1,4 @@
-//Write a LEX program to count number of words, lines, characters and
-whitespaces in a given paragraph.
+//Write a LEX program to count number of words, lines, characters and whitespaces in a given paragraph.
 
 %{
 #include <stdio.h>
