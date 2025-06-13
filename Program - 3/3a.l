@@ -1,3 +1,5 @@
+//Write a LEX program to count the number of comment lines in a C Program. Also eliminate them and copy that program into a separate file.
+
 %{
 #include<stdio.h>
 #include<stdlib.h>
