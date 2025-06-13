@@ -1,5 +1,7 @@
+//Write a YACC program that identifies the Function Definition of C language.
+
 %{
-#include "yacc7.tab.h"
+#include "y.tab.h"
 %}
 %%
 "int"|"void"|"char"|"float"|"double" { return TYP; }
