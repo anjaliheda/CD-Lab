@@ -1,5 +1,7 @@
+//Write a YACC program to recognize Declaration statement (C language) and display the number variables declared .
+
 %{
-#include "yacc5.tab.h"
+#include "y.tab.h"
 %}
 
 %%
