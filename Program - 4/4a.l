@@ -1,3 +1,5 @@
+//Write a LEX program to recognize and count the number of identifiers, operators and keywords in a given input file.
+
 %{
 #include <stdio.h>
 int key = 0, id = 0, op = 0;
