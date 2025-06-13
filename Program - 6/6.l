@@ -1,5 +1,6 @@
+//YACC program that reads the C statements for an input file and converts them in quadruple three address intermediate code.
 %{
-#include "yacc6.tab.h"
+#include "y.tab.h"
 %}
 
 %%
