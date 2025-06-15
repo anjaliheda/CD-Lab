@@ -20,10 +20,12 @@ S:
 ;
 
 stmt:
-    IF LPAREN cond RPAREN stmt {
+    IF LPAREN cond RPAREN {
         current_depth++;
         if (current_depth > max_depth)
             max_depth = current_depth;
+    }
+    stmt {
         current_depth--;
     }
     | ALPHA
