@@ -5,17 +5,15 @@
 #include <stdlib.h>
 #include <string.h>
 %}
-DIGIT [0-9]
-ID [a-zA-Z][a-zA-Z0-9]*
-WS [ \t\n]
-STRING \"[^"]*\"
+
 %%
 "int" { return INT; }
 "main" { return MAIN; }
 "printf" { return PRINTF; }
-{STRING} { yylval.str = strdup(yytext); return STRING; }
-{ID} { yylval.id = strdup(yytext); return ID; }
-{DIGIT}+ { yylval.num = atoi(yytext); return NUM; }
+[a-zA-Z][a-zA-Z0-9]*  { yylval.id = strdup(yytext); return ID; }
+[0-9]+  { yylval.num = atoi(yytext); return NUM; }
+\"[^"]*\" { yylval.str = strdup(yytext); return STRING; }
+[ \t\n]    ;   /* Skip whitespace */
 "+" { return ADD; }
 "=" { return ASSIGN; }
 "(" { return LPAREN; }
@@ -24,9 +22,8 @@ STRING \"[^"]*\"
 "," { return COMMA; }
 "{" { return LBRACE; }
 "}" { return RBRACE; }
-
-{WS} ; /* ignore whitespace */
 %%
+
 int yywrap() { return 1; }
 
 // HOW TO RUN
