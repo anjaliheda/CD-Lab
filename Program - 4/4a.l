@@ -3,7 +3,6 @@
 %{
 #include <stdio.h>
 int key = 0, id = 0, op = 0;
-extern FILE *yyin;  // Tell Flex to use this for input
 %}
 
 %%
