@@ -11,13 +11,10 @@
 %%
 int yywrap() { return 1; }
 
-// HOW TO RUN
-// bison -d yacc6.y
-// flex lex6.l
-// gcc -o prog yacc6.tab.c lex.yy.c -lfl
-
-
-// ./prog
+//lex 9.l
+//yacc -d 6.y
+// gcc lex.yy.c y.tab.c -o parser
+// ./parser
 
 // a=b+c*d;
 
