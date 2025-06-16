@@ -14,9 +14,7 @@ int yylex(void);
 %%
 
 S:
-    stmt ';' {
-        printf("Maximum nesting depth of if statements: %d\n", max_depth);
-    }
+    stmt ';'
 ;
 
 stmt:
@@ -46,6 +44,7 @@ relop:
 int main() {
     printf("Enter a nested if expression (end with semicolon `;`):\n");
     yyparse();
+    printf("Maximum nesting depth of if statements: %d\n", max_depth);
     return 0;
 }
 
