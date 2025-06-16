@@ -1,6 +1,7 @@
 //Write a LEX program to count number of Positive and Negative integers and Positive &amp; Negative fractions.
 
 %{
+#include<stdio.h>
 int nf = 0, p = 0, n = 0, pf = 0;
 %}
 
