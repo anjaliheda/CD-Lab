@@ -29,6 +29,6 @@ printf("Valid\n");
 return 0;
 }
 void yyerror(){
-printf("Invlaid\n");
+printf("Invalid\n");
 exit(0);
 }
